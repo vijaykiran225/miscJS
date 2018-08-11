@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var houses = ["spades", "hearts", "clubs", "diamonds"];
+        var ptr = -1;
+
+        function format(number){
+            switch(number){
+                case 1: return "ace";
+                case 11: return "jack";
+                case 12: return "queen";
+                case 13: return "king";
+                default : return ""+number;
+            }
+        }
+        function printallCards() {
+            red = true;
+            for (i = 0; i < 52; i++) {
+                var id=i % 13;
+                if (id == 0) {
+                    red = !red;
+                    ptr++;
+                }
+                var aCard = {
+                    color: red?'red': 'black',
+                    value: format(id+1),
+                    house: houses[ptr],
+                    joker: false
+                };
+
+
+                //  document.getElementById("output").innerHTML += " <br> "+id;
+                  document.getElementById("output").innerHTML += ", <br> "+JSON.stringify(aCard);
+            }
+        }
+    </script>
+</head>
+
+<body onload="printallCards()">
+    <div id="output"></div>
+</body>
+
+</html>

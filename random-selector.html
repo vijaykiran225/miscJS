@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./cards.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./bootstrap.css">
+</head>
+
+<body onload="flipBack()">
+    <div>
+        <center>
+            <button class="btn btn-primary" onclick="startDeal()">Deal !</button>
+            <button class="btn btn-info" onclick="stopDeal()">stop</button>
+            <button class="btn btn-success" onclick="shuffle()">shuffle deck</button>
+            <button class="btn btn-danger" onclick="showAll()">reveal</button>
+            <button class="btn btn-warning" onclick="flipBack()">flip</button>
+            <button class="btn btn-default" onclick="revertOriginal()">reset</button>
+            <br>
+            <br>
+            <span style="background-color:blueviolet" id="numberValue"></span>
+            <br>
+            <br>
+            <br>
+            <span id="result"></span>
+            <span id="deck"></span>
+            <span id="debug"></span>
+        </center>
+    </div>
+</body>
+
+</html>
